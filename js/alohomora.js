@@ -6,6 +6,8 @@ for (var i = 0; i < btns.length; i++) {
         if (detectCurrCheck()) {
             findMouse(currCheck);
             currCheck++;
+        } else {
+            console.log("findMouse has already been run 3 times.");
         }
     });
 }
