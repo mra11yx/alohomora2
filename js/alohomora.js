@@ -64,7 +64,7 @@ function findMouse(i) {
         mouseCheckVal = 0;
         window.addEventListener("mousemove", returnMouse);
         console.log("mouseCheckVal is: ", mouseCheckVal);
-        console.log("mouse detected started!");
+        console.log("mouse detection started!");
         setTimeout(function () {
             window.removeEventListener("mousemove", returnMouse);
             console.log("mouse detection stopped!");
