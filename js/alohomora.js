@@ -4,6 +4,7 @@ for (var i = 0; i < btns.length; i++) {
     /* do it this way, instead of via forEach, for IE compatibility */
     btns[i].addEventListener("click", function (evt) {
         if (detectCurrCheck()) {
+            console.log("findMouse running");
             findMouse(currCheck);
             currCheck++;
         } else {
