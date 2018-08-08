@@ -7,7 +7,8 @@ for (var i = 0; i < btns.length; i++) {
             console.log("findMouse running");
             findMouse(currCheck);
             currCheck++;
-        } else {
+        }
+        else {
             console.log("findMouse has already been run 3 times.");
         }
     });
@@ -47,6 +48,7 @@ var srScore = {
         }
     }
     /* variable to determine the results of mouse checks 1, 2, and 3 */
+    /* todo: try instead logging all mouseover events in a given time span and push them to an array. Evaluate the X and Y deltas by comparing each value with the value before it and converting all negative deltas to positive numbers via x = -x */
 var mouseChecks = [0, 0, 0];
 var currCheck = 0;
 var mouseCheckVal = 0;
