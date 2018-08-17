@@ -1,13 +1,3 @@
-/*source https://stackoverflow.com/questions/15744042/events-not-being-tracked-in-new-google-analytics-analytics-js-setup*/
-function analyticsThings() {
-    if ("ga" in window) {
-        tracker = ga.getAll()[0];
-        if (tracker)
-            tracker.send("event", "Test", "Test GA");
-    }
-}
-
-/*end*/
 
 /* get all buttons */
 var btns = document.querySelectorAll(".btn");
@@ -15,7 +5,7 @@ for (var i = 0; i < btns.length; i++) {
     /* do it this way, instead of via forEach, for IE compatibility */
     btns[i].addEventListener("click", function (evt) {
         mouseCheck(); /* this comes from mouseDetector.js */
-
+        ga("send", "event", "Alohomora", "Wave");
     });
 }
 /* perform user agent detection and return numerical and textual values*/
