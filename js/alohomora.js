@@ -13,6 +13,7 @@ for (var i = 0; i < btns.length; i++) {
     /* must have the same number of btns and fakes */
     btns[i].addEventListener("click", function (evt) {
         mouseCheck(); /* this comes from mouseDetector.js */
+        console.log("real button clicked via screen reader");
         ga("send", "event", "real button clicked via screen reader");
     });
 
@@ -27,7 +28,8 @@ for (var i = 0; i < btns.length; i++) {
 
     fakes[i].addEventListener("click", function (evt) {
         mouseCheck(); /* this comes from mouseDetector.js */
-        ga("send", "event", "fake button clicked");
+        console.log("fake button clicked with mouse");
+        ga("send", "event", "fake button clicked with mouse");
     });
 }
 
