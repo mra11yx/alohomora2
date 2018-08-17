@@ -12,7 +12,7 @@
     white-space: nowrap!important;
 }
 
-.fake {
+.fake, #ctrl {
     background-color: #003;
     color: #fff;
     border: 2px solid #003;

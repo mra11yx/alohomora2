@@ -5,6 +5,10 @@ function runThing() {
     ga("send", "event", "Alohomora", "Wave");
 
 }
+/*just to test #ctrl*/
+document.getElementById("ctrl").addEventListener("click", function (evt) {
+    alert("control button clicked");
+});
 var btns = document.querySelectorAll(".real");
 var fakes = document.querySelectorAll(".fake")
 
