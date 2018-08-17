@@ -12,7 +12,7 @@ for (var i = 0; i < btns.length; i++) {
     /* do it this way, instead of via forEach, for IE compatibility */
     /* must have the same number of btns and fakes */
     btns[i].addEventListener("click", function (evt) {
-        mouseCheck(); /* this comes from mouseDetector.js */
+        /*mouseCheck();*/
         console.log("real button clicked via screen reader");
         alert("real click");
         ga("send", "event", "real button clicked via screen reader", "real");
@@ -29,7 +29,7 @@ for (var i = 0; i < btns.length; i++) {
     });
 
     fakes[i].addEventListener("click", function (evt) {
-        mouseCheck(); /* this comes from mouseDetector.js */
+        /*mouseCheck();*/
         console.log("fake button clicked with mouse");
         alert("fake clicked");
         ga("send", "event", "fake button clicked with mouse", "fake");
