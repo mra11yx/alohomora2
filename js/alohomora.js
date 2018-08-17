@@ -26,7 +26,7 @@ for (var i = 0; i < btns.length; i++) {
         if (evt.key === " " || evt.key === "Enter") {
             console.log("Space or Enter pressed");
             alert("enter or space");
-            ga("send", "event", "ARIA " + evt.target.getAttribute("role") + " clicked via screen reader", evt.target.getAttribute("role") + " on " + detectPlatform().osTxt);
+            ga("send", "event", "ARIA " + evt.target.getAttribute("role") + " activated via keyboard", evt.target.getAttribute("role") + " on " + detectPlatform().osTxt);
         }
 
 
