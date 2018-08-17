@@ -1,5 +1,11 @@
 
 /* get all buttons */
+
+function runThing() {
+    console.log("running runThing");
+     ga("send", "event", "Alohomora", "Wave");
+    
+}
 var btns = document.querySelectorAll(".btn");
 for (var i = 0; i < btns.length; i++) {
     /* do it this way, instead of via forEach, for IE compatibility */
