@@ -14,13 +14,13 @@ for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function (evt) {
         mouseCheck(); /* this comes from mouseDetector.js */
         console.log("real button clicked via screen reader");
-        ga("send", "event", "real button clicked via screen reader");
+        ga("send", "event", "real button clicked via screen reader", "real");
     });
 
     btns[i].addEventListener("keydown", function (evt) {
         if (evt.key === " " || evt.key === "Enter") {
             console.log("Space or Enter pressed");
-            ga("send", "event", "real button activated with keyboard");
+            ga("send", "event", "real button activated with keyboard", "real");
         }
 
 
@@ -29,7 +29,7 @@ for (var i = 0; i < btns.length; i++) {
     fakes[i].addEventListener("click", function (evt) {
         mouseCheck(); /* this comes from mouseDetector.js */
         console.log("fake button clicked with mouse");
-        ga("send", "event", "fake button clicked with mouse");
+        ga("send", "event", "fake button clicked with mouse", "fake");
     });
 }
 
