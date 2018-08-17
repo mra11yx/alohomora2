@@ -1,18 +1,33 @@
-
 /* get all buttons */
 
 function runThing() {
     console.log("running runThing");
-     ga("send", "event", "Alohomora", "Wave");
-    
+    ga("send", "event", "Alohomora", "Wave");
+
 }
 var btns = document.querySelectorAll(".real");
+var fakes = document.querySelectorAll(".fake")
 
 for (var i = 0; i < btns.length; i++) {
     /* do it this way, instead of via forEach, for IE compatibility */
+    /* must have the same number of btns and fakes */
     btns[i].addEventListener("click", function (evt) {
         mouseCheck(); /* this comes from mouseDetector.js */
-        ga("send", "event", "Alohomora", "Wave");
+        ga("send", "event", "real button clicked via screen reader");
+    });
+
+    btns[i].addEventListener("keydown", function (evt) {
+        if (evt.key === " " || evt.key === "Enter") {
+            console.log("Space or Enter pressed");
+            ga("send", "event", "real button activated with keyboard");
+        }
+
+
+    });
+
+    fakes[i].addEventListener("click", function (evt) {
+        mouseCheck(); /* this comes from mouseDetector.js */
+        ga("send", "event", "fake button clicked");
     });
 }
 
