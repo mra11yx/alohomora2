@@ -17,16 +17,16 @@ for (var i = 0; i < btns.length; i++) {
     /* must have the same number of btns and fakes */
     btns[i].addEventListener("click", function (evt) {
         /*mouseCheck();*/
-        console.log("real button clicked via screen reader");
+        console.log("ARIA button clicked via screen reader");
         alert("real click");
-        ga("send", "event", "real button clicked via screen reader", evt.target.getAttribute("role"));
+        ga("send", "event", "ARIA button clicked via screen reader", evt.target.getAttribute("role") + " on " + detectPlatform().osTxt);
     });
 
     btns[i].addEventListener("keydown", function (evt) {
         if (evt.key === " " || evt.key === "Enter") {
             console.log("Space or Enter pressed");
             alert("enter or space");
-            ga("send", "event", "real button activated with keyboard",  evt.target.getAttribute("role"));
+            ga("send", "event", "ARIA button activated with keyboard", evt.target.getAttribute("role") + " on " + detectPlatform().osTxt);
         }
 
 
