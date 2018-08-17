@@ -19,14 +19,14 @@ for (var i = 0; i < btns.length; i++) {
         /*mouseCheck();*/
         console.log("ARIA button clicked via screen reader");
         alert("real click");
-        ga("send", "event", "ARIA button clicked via screen reader", evt.target.getAttribute("role") + " on " + detectPlatform().osTxt);
+        ga("send", "event", "ARIA " + evt.target.getAttribute("role") + " clicked via screen reader", evt.target.getAttribute("role") + " on " + detectPlatform().osTxt);
     });
 
     btns[i].addEventListener("keydown", function (evt) {
         if (evt.key === " " || evt.key === "Enter") {
             console.log("Space or Enter pressed");
             alert("enter or space");
-            ga("send", "event", "ARIA button activated with keyboard", evt.target.getAttribute("role") + " on " + detectPlatform().osTxt);
+            ga("send", "event", "ARIA " + evt.target.getAttribute("role") + " clicked via screen reader", evt.target.getAttribute("role") + " on " + detectPlatform().osTxt);
         }
 
 
@@ -36,7 +36,7 @@ for (var i = 0; i < btns.length; i++) {
         /*mouseCheck();*/
         console.log("fake button clicked with mouse");
         alert("fake clicked");
-        ga("send", "event", "fake button clicked with mouse", "fake");
+        ga("send", "event", "fake button clicked with mouse", "fake on " + detectPlatform().osTxt);
     });
 }
 
