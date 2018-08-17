@@ -1,14 +1,15 @@
 .sro {
-    /*https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe*/
-    clip: rect(1px 1px 1px 1px);
-    /* IE 6/7 */
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    /* added line */
-    width: 1px;
+    /*https://labs.levelaccess.com/index.php/Offscreen_Text*/
+    position: absolute!important;
+    clip: rect(1px 1px 1px 1px)!important;
+    clip: rect(1px, 1px, 1px, 1px)!important;
+    clip-path: inset(50%)!important;
+    padding: 0!important;
+    border: 0!important;
+    height: 1px!important; 
+    width: 1px!important; 
+    overflow: hidden!important;
+    white-space: nowrap!important;
 }
 
 .btn.fake {
