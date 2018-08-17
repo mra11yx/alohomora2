@@ -6,8 +6,8 @@
     clip-path: inset(50%)!important;
     padding: 0!important;
     border: 0!important;
-    height: 1px!important; 
-    width: 1px!important; 
+    height: 1px!important;
+    width: 1px!important;
     overflow: hidden!important;
     white-space: nowrap!important;
 }
@@ -21,7 +21,9 @@
     font-family: sans-serif;
     padding: .25em;
     font-weight: bold;
-    margin: .55em;
+    margin-left: 2em;
+    margin-top: .5em;
+    position: relative;
 }
 
 .real:focus+.fake {
