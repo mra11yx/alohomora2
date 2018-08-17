@@ -19,14 +19,14 @@ for (var i = 0; i < btns.length; i++) {
         /*mouseCheck();*/
         console.log("real button clicked via screen reader");
         alert("real click");
-        ga("send", "event", "real button clicked via screen reader", "real");
+        ga("send", "event", "real button clicked via screen reader", evt.target.getAttribute("role"));
     });
 
     btns[i].addEventListener("keydown", function (evt) {
         if (evt.key === " " || evt.key === "Enter") {
             console.log("Space or Enter pressed");
             alert("enter or space");
-            ga("send", "event", "real button activated with keyboard", "real");
+            ga("send", "event", "real button activated with keyboard",  evt.target.getAttribute("role"));
         }
 
 
