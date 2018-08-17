@@ -6,7 +6,8 @@ function runThing() {
      ga("send", "event", "Alohomora", "Wave");
     
 }
-var btns = document.querySelectorAll(".btn");
+var btns = document.querySelectorAll(".real");
+
 for (var i = 0; i < btns.length; i++) {
     /* do it this way, instead of via forEach, for IE compatibility */
     btns[i].addEventListener("click", function (evt) {
@@ -14,6 +15,8 @@ for (var i = 0; i < btns.length; i++) {
         ga("send", "event", "Alohomora", "Wave");
     });
 }
+
+
 /* perform user agent detection and return numerical and textual values*/
 function detectPlatform() {
     if (navigator.userAgent.match(/iPhone/) || navigator.userAgent.match(/iPod/) || navigator.userAgent.match(/iPad/)) {
