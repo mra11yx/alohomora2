@@ -12,11 +12,15 @@
 }
 
 .btn.fake {
-    background-color: #00c;
+    background-color: #003;
     color: #fff;
-    border: 2px solid #00c;
+    border: 2px solid #003;
     border-radius: 5px;
-    max-width: 3em;
+    max-width: 8em;
+    font-family: sans-serif;
+    padding: .25em;
+    font-weight: bold;
+    margin: .25em;
 }
 
 .real:focus+.fake {
