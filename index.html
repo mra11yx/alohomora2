@@ -9,19 +9,15 @@
             i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
             a.async = 1;
             a.src = g;
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
         ga('create', 'UA-123337587-1', 'auto');
         ga('send', 'pageview');
     </script>
     <!-- End Google Analytics -->
-
-
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -34,8 +30,7 @@
                 j = d.createElement(s),
                 dl = l != 'dataLayer' ? '&l=' + l : '';
             j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-M2LQSRH');
     </script>
@@ -44,8 +39,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alohomora2</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link rel="stylesheet" href="css/styles.css"> </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -53,16 +47,25 @@
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2LQSRH" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <h1>Alohomora Test</h1>
-    <!-- template: offscreen button or link, adjacent to aria-hidden, focusable div -->
-    <!-- template:  -->
-    <div tabindex="0" role="link" class="sro real" type="button" id="btn1">Click me!</div>
-    <div class="fake btn" aria-hidden="true">Click me!</div>
-    <div role="button" tabindex="0" class="sro real" type="button" id="btn2">Click me, too!</div>
-    <div class="fake btn" aria-hidden="true">Click me, too!</div>
-    <a href="#">Test</a>
-    <div role="button" tabindex="0" id="ctrl">Control ARIA button</div>
+    <a href="#content" class="skip">Skip to main content</a>
+    <nav class="nav">
+        <a href="#" class="home">Home</a>
+        <a href="#" class="navlinks">About</a>
+        <a href="#" class="navlinks">Tools</a>
+        <a href="#" class="navlinks">More</a>
 
+
+    </nav>
+    <main class="main">
+        <h1>Alohomora Test</h1>
+        <!-- template: offscreen button or link, adjacent to aria-hidden, focusable div -->
+        <!-- template:  -->
+        <div tabindex="0" role="link" class="sro real" type="button" id="btn1">Click me!</div>
+        <div class="fake btn" aria-hidden="true">Click me!</div>
+        <div role="button" tabindex="0" class="sro real" type="button" id="btn2">Click me, too!</div>
+        <div class="fake btn" aria-hidden="true">Click me, too!</div> <a href="#">Test</a>
+        <div role="button" tabindex="0" id="ctrl">Control ARIA button</div>
+    </main>
     <script src="./js/mouseDetector.js"></script>
     <script src="./js/alohomora.js"></script>
 </body>
