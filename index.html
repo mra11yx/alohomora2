@@ -47,7 +47,9 @@
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2LQSRH" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <a href="#content" class="skip">Skip to main content</a>
+    <span role="link" tabindex="0" id="skipLink" class="skip sro real" data-target="main">Skip to main content</span>
+    <div aria-hidden="true" id="skipLinkFake" class="sro fake skipFake">Skip to main content</div>
+    
     <nav class="nav">
         <a href="#" class="home">Home</a>
         <a href="#" class="navlinks">About</a>
@@ -56,16 +58,24 @@
 
 
     </nav>
+    <div class="hero"></div>
     <main class="main">
+       
         <h1>Alohomora Test</h1>
+        <h2 tabindex="-1">test thing</h2>
+        <a href="#">this is an actual link</a>
         <!-- template: offscreen button or link, adjacent to aria-hidden, focusable div -->
         <!-- template:  -->
-        <div tabindex="0" role="link" class="sro real" type="button" id="btn1">Click me!</div>
-        <div class="fake btn" aria-hidden="true">Click me!</div>
-        <div role="button" tabindex="0" class="sro real" type="button" id="btn2">Click me, too!</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat optio unde quo voluptates sint odio magni doloremque omnis aliquid iusto veniam repellat rerum, magnam dolore, beatae, ut labore rem minima?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quaerat ullam, accusantium officiis cum sint ea voluptate dolorem illum pariatur atque, dolorum facilis quos quibusdam. Molestiae ratione amet, aliquid ipsum!</p>
+        
+        <div tabindex="0" role="link" class="sro real" id="btn1">Click me!</div>
+        <div class="fake link" aria-hidden="true">Click me!</div>
+        <div role="button" tabindex="0" class="sro real" id="btn2">Click me, too!</div>
         <div class="fake btn" aria-hidden="true">Click me, too!</div> <a href="#">Test</a>
         <div role="button" tabindex="0" id="ctrl">Control ARIA button</div>
     </main>
+    <script src="js/main.js"></script>
     <script src="./js/mouseDetector.js"></script>
     <script src="./js/alohomora.js"></script>
 </body>

@@ -1,5 +1,6 @@
-* {
-    /*    box-sizing: border-box;*/
+body {
+    padding: 0;
+    margin: 0;
 }
 
 a:focus,
@@ -15,7 +16,9 @@ a {
 
 nav,
 .nav {
-    position: absolute;
+    position: fixed;
+    display: inline-block;
+    /*display:flex causes MASSIVE problems when zoomed in - nav bar content gets cut off, cannot scroll horizontally. need to fix*/
     width: 100%;
     clear: both;
     outline: 1x solid #222;
@@ -25,12 +28,13 @@ nav,
     left: 0;
     /*    padding-left: .5em;*/
     box-shadow: 0px 1px 1px 1px #444;
+    z-index: 100;
 }
 
 .nav a {
     display: inline-block;
     color: #222;
-/*    position: relative;*/
+    /*    position: relative;*/
     line-height: 3rem;
     padding-left: .5em;
     padding-right: .5em;
@@ -38,14 +42,15 @@ nav,
     font-size: 1.5rem;
 }
 
-.nav a.home {
+.nav .home {
     margin-left: 1em;
     margin-right: 3em;
-/*    font-size: 2rem;*/
+    font-size: 2.5rem;
+    vertical-align: top;
 }
 
-.nav a.navlinks {
-/*    top: -.5rem;*/
+.nav .navlinks {
+    vertical-align: top;
 }
 
 .nav a:focus {
@@ -53,13 +58,31 @@ nav,
     color: #fff;
 }
 
-
-.skip {
+.fake.skipFake {
     font-family: sans-serif;
     font-size: 1.2rem;
+    font-weight: 100;
+    display: inline-block;
+    /*    cursor: pointer;*/
+    z-index: 1000;
+    position: absolute;
+    margin-top: 0;
+    top: 1%;
+    background-color: #000;
+    color: #fff;
+    text-decoration: underline;
+    padding: .5em;
 }
-.sro,
-.skip {
+
+.hero {
+    width: 100%;
+    outline: 1px solid #000;
+    height: 15rem;
+    margin-top: 3rem;
+    background-color: burlywood;
+}
+
+.sro {
     /*https://labs.levelaccess.com/index.php/Offscreen_Text*/
     position: absolute;
     clip: rect(1px 1px 1px 1px);
@@ -73,28 +96,19 @@ nav,
     white-space: nowrap;
 }
 
-.skip:focus {
-    position: static;
-    width: 200px;
-    padding: auto;
-    border: auto;
-    height: 100px;
-    z-index: 1000;
-    clip: auto;
-    
-}
-
 .main {
-    margin-top: 2rem;
-    width: 90%;
-    padding: 2em;
+    /*    position: relative;*/
+    margin-top: 3rem;
+    width: 75%;
+    padding-left: 3em;
+    padding-right: 3em;
     height: 100vh;
     margin-left: auto;
     margin-right: auto;
     outline: 1px solid #ccc;
 }
 
-.fake,
+.fake.btn,
 #ctrl {
     background-color: #003;
     color: #fff;
@@ -109,7 +123,58 @@ nav,
     position: relative;
 }
 
-.real:focus+.fake {
-    outline: 1px solid #000;
-    box-shadow: 0px 0px 2px 1px #000;
+a,
+[role='link']+.fake:not(.skipFake) {
+    color: #029;
+    background-color: inherit;
+    border: none;
+    display: inline;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+[role='link']:focus+.fake,
+a:not(navlinks):focus {
+    text-decoration: underline;
+    outline: 2px solid #000;
+    /*    font-weight: bolder;*/
+}
+
+[role='link']+.fake:hover,
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px dotted #999;
+    box-shadow: inset 0px 0px 2px #000;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+    font-family: sans-serif;
+}
+
+h1,
+.h1 {
+    font-size: 4rem;
+    /*    font-family: cursive;*/
+    text-align: center;
+    color: #222;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+h2,
+.h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+    font-family: "Helvetica", serif;
+    text-transform: capitalize;
 }
