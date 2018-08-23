@@ -76,6 +76,11 @@ nav,
     background-color: burlywood;
 }
 
+.hero * {
+vertical-align: bottom;
+    line-height: 4em;
+}
+
 .sro {
     /*https://labs.levelaccess.com/index.php/Offscreen_Text*/
     position: absolute;
@@ -159,7 +164,8 @@ h1,
 .h1 {
     font-size: 4rem;
     /*    font-family: cursive;*/
-    text-align: center;
+    text-align: left;
+    margin-left: 10%;
     color: #222;
     font-weight: 100;
     text-transform: uppercase;
