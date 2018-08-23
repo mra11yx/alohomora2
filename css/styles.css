@@ -49,6 +49,7 @@ nav,
 .nav a:focus {
     background-color: #222;
     color: #fff;
+    outline: 1px solid #000;
 }
 
 .fake.skipFake {
