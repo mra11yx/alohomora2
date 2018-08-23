@@ -58,7 +58,7 @@ nav,
     display: inline-block;
     /*    cursor: pointer;*/
     z-index: 1000;
-    position: absolute;
+    position: fixed;
     margin-top: 0;
     top: 1%;
     background-color: #000;
@@ -140,7 +140,7 @@ a:hover {
 }
 
 input:focus,
-textarea:focus, a:not(.navlinks):not(.home):focus, button:focus, [role='button']:not(.real):focus, [role='link']:not(.real):focus, .real:focus+.fake:not(.srFake) {
+textarea:focus, a:not(.navlinks):not(.home):focus, button:focus, [role='button']:not(.real):focus, [role='link']:not(.real):focus, .real:focus+.fake:not(.skipFake) {
     outline: 2px dotted #000;
     box-shadow: inset 0px 0px 2px #000;
 }
