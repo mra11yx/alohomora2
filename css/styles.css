@@ -70,15 +70,26 @@ nav,
 
 .hero {
     width: 100%;
-    outline: 1px solid #000;
-    height: 20rem;
+/*    outline: 1px solid #000;*/
+    height: 25rem;
     margin-top: 3rem;
-    background-color: burlywood;
+    background-image: url(../img/syr.JPG);
+    background-position: center right;
+    background-size: auto;
+    background-origin: content-box;
+    overflow: hidden;
 }
 
+
 .hero * {
-/*    vertical-align: bottom;*/
-    line-height: 5em;
+    /*    vertical-align: bottom;*/
+    line-height: 4em;
+}
+
+.hero h1 {
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+    font-size: 5rem;
 }
 
 .sro {
@@ -95,7 +106,7 @@ nav,
     white-space: nowrap;
 }
 
-.main {
+.margined {
     /*    position: relative;*/
     margin-top: 3rem;
     width: 65%;
