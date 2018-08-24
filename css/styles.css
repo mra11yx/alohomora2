@@ -70,26 +70,52 @@ nav,
 
 .hero {
     width: 100%;
-/*    outline: 1px solid #000;*/
+    /*    outline: 1px solid #000;*/
+    position: relative;
     height: 25rem;
     margin-top: 3rem;
+    overflow: hidden;
+}
+
+.hero h1 {
+    line-height: 20rem;
+    height: auto;
+    width: auto;
+    padding: 0;
+    /*    margin: 0;*/
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+    font-size: 5rem;
+    z-index: 1;
+}
+
+.hero .bgcover {
+    opacity: 0;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    transition: opacity .3s;
+}
+
+.hero:hover .bgcover {
+    opacity: .5;
+    transition: opacity .3s;
+}
+
+.hero .bgimg {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    top: 0;
     background-image: url(../img/syr.JPG);
     background-position: center right;
     background-size: auto;
     background-origin: content-box;
-    overflow: hidden;
-}
-
-
-.hero * {
-    /*    vertical-align: bottom;*/
-    line-height: 4em;
-}
-
-.hero h1 {
-    color: #fff;
-    text-shadow: 2px 2px 5px #000;
-    font-size: 5rem;
 }
 
 .sro {
