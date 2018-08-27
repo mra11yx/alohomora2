@@ -69,22 +69,32 @@
         </div>
         <div class="margined">
 
-            <h2 tabindex="-1">test thing</h2>
-            <a href="#">this is an actual link</a>
+            <h2 tabindex="-1" class="alohomora">test thing</h2>
+            <a href="#">this is an actual link, not an alohomora link</a>
             <!-- template: offscreen button or link, adjacent to aria-hidden, focusable div -->
             <!-- template:  -->
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat optio unde quo voluptates sint odio magni doloremque omnis aliquid iusto veniam repellat rerum, magnam dolore, beatae, ut labore rem minima?</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quaerat ullam, accusantium officiis cum sint ea voluptate dolorem illum pariatur atque, dolorum facilis quos quibusdam. Molestiae ratione amet, aliquid ipsum!</p>
 
-            <div tabindex="0" role="link" class="sro real" id="btn1">Click me!</div>
+            <!--<div tabindex="0" role="link" class="sro real" id="btn1">Click me!</div>
             <div class="fake link" aria-hidden="true">Click me!</div>
-            <div role="button" tabindex="0" class="sro real" id="btn2">Click me, too!</div>
-            <div class="fake btn" aria-hidden="true">Click me, too!</div> <a href="#">Test</a>
+            -->
+            <a href="#" class="alohomora">Click me, I'm a link!</a>
+            <button class="btn alohomora">Click me, too, I'm a button!</button>
+            <!--<div role="button" tabindex="0" class="sro real" id="btn2">Click me, too!</div>
+            <div class="fake btn" aria-hidden="true">Click me, too!</div>-->
             <div role="button" tabindex="0" id="ctrl">Control ARIA button</div>
+
+            <a href="#" class="alohomora">Test internal link</a>
+            <a href="http://www.apple.com" class="alohomora">Test external link</a>
+            <button type="button" class="alohomora btn">This is a button with type button</button>
+            <hr>
+            <a href="#" id="pizza" class="alohomora">This has an ID of pizza</a>
         </div>
     </main>
     <script src="js/main.js"></script>
     <script src="./js/mouseDetector.js"></script>
+    <script src="js/alohomoraMaker.js"></script>
     <script src="./js/alohomora.js"></script>
 </body>
 

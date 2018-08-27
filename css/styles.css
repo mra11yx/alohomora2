@@ -24,7 +24,7 @@ nav,
     z-index: 100;
 }
 
-.nav a {
+.nav a, .nav [role='link'] {
     display: inline-block;
     color: #222;
     /*    position: relative;*/
