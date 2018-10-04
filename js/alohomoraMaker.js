@@ -39,7 +39,7 @@ function alohomoraAllTheThings() {
         fake.setAttribute("aria-hidden", "true");
 
         /*adjust the real one*/
-        real.classList.add("sro"); /*make the real control screen reader-only*/
+        // real.classList.add("sro"); /*make the real control screen reader-only*/
         real.classList.add("real");
         if (elType && elType !== "text") {
             real.setAttribute("role", elType);
@@ -77,27 +77,27 @@ function alohomoraAllTheThings() {
         console.log("hasHref in main function: ", hasHref);
         var elClasses = curr.classList;
         switch (curr.nodeName.toLowerCase()) {
-        case "a":
-            elType = "link";
-            break;
-        case "button":
-            elType = "button";
-            break;
-        case "h1":
-            console.log(curr.nodeName);
-            elType = "text";
-            break;
-        case "h2":
-            console.log(curr.nodeName);
-            elType = "text";
-            break;
-        case "p":
-            console.log(curr.nodeName);
-            elType = "text";
-            break;
-        default:
-            elType = null;
-            break;
+            case "a":
+                elType = "link";
+                break;
+            case "button":
+                elType = "button";
+                break;
+            case "h1":
+                console.log(curr.nodeName);
+                elType = "text";
+                break;
+            case "h2":
+                console.log(curr.nodeName);
+                elType = "text";
+                break;
+            case "p":
+                console.log(curr.nodeName);
+                elType = "text";
+                break;
+            default:
+                elType = null;
+                break;
         }
         console.log("elType is: ", elType);
 
